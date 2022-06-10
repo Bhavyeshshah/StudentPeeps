@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}StudentPeeps | Verification Email{% endblock %}
+
+{% block linkshead %}
+<style>
+    #notreceive {
+        background: none;
+        text-decoration: none;
+        color: rgb(28, 189, 207);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+    }
+
+    #notreceive:hover {
+        text-decoration: underline;
+    }
+
+    .btn-outline-primary {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        height: 40px;
+        line-height: 2.5rem;
+        padding: 0 3rem;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid #9245df;
+        color: #9245df;
+    }
+
+    .btn-outline-primary:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em #a044fd;
+        background-size: 100% 100%;
+        transform: translateY(-0.15em);
+        background-color: #b36ef8;
+        border: 1px solid #9245df;
+    }
+    body {
+        background-image: url("/static/images/graphic.png");
+        background-repeat: no-repeat;
+    }
+
+    @media (max-width:786px) {
+        body {
+            background-image: url("");
+        }
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div style="position: relative; overflow: hidden auto;">
+    <div
+        style="position: relative; width: 100%; max-width: 440px; min-width: 320px; margin: 10px auto; padding: 2em 2em 1em; text-align: center; background-color: rgb(255, 255, 255);">
+        <svg width="240" height="150" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="display: block; margin: 0px auto 2em;">
+            <path
+                d="M3.54 62.843C14.225 38.58 50.2 26.258 78.365 16.268 106.695 6.144 127.485-1.928 152.148.405c14.265 1.398 28.028 5.788 40.298 12.856 12.27 7.067 22.742 16.635 30.665 28.017 17.673 25.815 23.983 65.088 6.631 84.468-17.353 19.38-58.894 19.295-97.524 21.639-38.63 2.345-74.618 7.254-99.692-8.413C7.453 123.304-7.143 87.108 3.541 62.843z"
+                fill="#93D6C5"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="m156.121 83.729-66.235 17.748c-3.047.816-6.216-1.118-7.073-4.317L70.39 50.796c-.857-3.2.92-6.459 3.966-7.275l66.235-17.748c3.053-.817 6.216 1.118 7.073 4.317l12.423 46.364c.857 3.2-.914 6.457-3.966 7.275z"
+                fill="#fff"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M76.895 51.293c.438-1.35 1.49-2.416 2.85-2.78l66.235-17.748c1.363-.365 2.806.032 3.859.982L121.134 70.51 76.895 51.293zm.123 3.324 12.244 45.697c.661 2.467 3.055 3.841 5.236 3.256l66.235-17.747c2.185-.586 3.567-2.97 2.906-5.438l-12.245-45.697-28.558 38.566a1.5 1.5 0 0 1-1.803.483l-44.015-19.12zm1.95-9.002c-3.912 1.048-6.08 5.18-5.027 9.111l12.424 46.365c1.053 3.932 4.996 6.426 8.91 5.377l66.234-17.748c3.919-1.05 6.081-5.18 5.027-9.111l-12.423-46.365c-1.053-3.93-4.99-6.427-8.91-5.377L78.969 45.615z"
+                fill="#272727"></path>
+            <ellipse cx="120" cy="119" rx="45" ry="6" fill="#000" fill-opacity=".2"></ellipse>
+        </svg>
+        <h2>Uplod successful</h2>
+        <p style="color: rgb(60, 61, 61); margin-top: 0.5em;"><span>We will check your Student Id Proof & verify your
+                status as soon as possible. You will receive mail from us after your account will verified by us.
+        </p>
+        <div style="margin-top: 1.5em;">
+            <div style="margin-top: -8px;">
+                <div style="text-align: left;">
+                    <div style="display: inline-block;"><svg width="0.5em" height="0.5em" viewBox="0 0 8 11"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            style="transition: all 0.3s ease 0s; transform: rotate(0deg); margin-right: 4px; vertical-align: middle; width: 0.5em; height: 0.875em;">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1">
+                                <g transform="translate(-71.000000, -5.000000)" fill-rule="nonzero" fill="#1CBDCF">
+                                    <path
+                                        d="M70.2928932,9.12435786 L74.2928932,13.3089732 C74.6834175,13.7175217 75.3165825,13.7175217 75.7071068,13.3089732 L79.7071068,9.12435786 C80.0976311,8.71580937 80.0976311,8.0534214 79.7071068,7.64487291 C79.3165825,7.23632442 78.6834175,7.23632442 78.2928932,7.64487291 L74.2928932,11.8294883 L75.7071068,11.8294883 L71.7071068,7.64487291 C71.3165825,7.23632442 70.6834175,7.23632442 70.2928932,7.64487291 C69.9023689,8.0534214 69.9023689,8.71580937 70.2928932,9.12435786 L70.2928932,9.12435786 Z"
+                                        transform="translate(75.000000, 10.476923) rotate(-90.000000) translate(-75.000000, -10.476923) ">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg></div><span><a id="notreceive" onclick="PointShow()" href="#">Didn't
+                            receive an email within 2days?</a></span>
+                    <div id="datashow"
+                        style="border-radius: 5px; background: rgb(239, 244, 244); padding: 0px; margin-top: 0.5em; transition: max-height 0.15s ease-out 0s;display: none;">
+                        <div style="font-size: 14px; margin-left: 10px;">
+                            <p style="margin-bottom: 0.5em;">If you don’t see an email from us within a 2 days,
+                                follow these steps:</p>
+                            <ul style="padding-left: 1em; margin-bottom: 0px;">
+                                <li>Make sure your email address is correct at the time you have signed up.</li>
+                                <li>Check your spam.</li>
+                                <li>Still not receive mail use another method.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 1.5em;">
+                <div style="margin-top: 0.5em;">
+                    <div class="row justify-content-start mt-4">
+                        <div class="button col">
+                            <a href="/account/signup"><button class="btn btn-outline-primary mt-2">Use another
+                                    method</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function PointShow() {
+        var dataShow = document.getElementById("datashow");
+
+        if (dataShow.style.display == "none") {
+            dataShow.style.display = "block";
+        }
+
+        else {
+            dataShow.style.display = "none";
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+{% endblock %}

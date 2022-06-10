@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}StudentPeeps >> Student Discounts Whole Truth Food{% endblock %}
+
+{% block linkshead %}
+
+<link rel="stylesheet" href="{% static 'css/aftercode.css' %}">
+<script src="{% static 'js/aftercode.js' %}"></script>
+<style>
+    .prdouctimg {
+        background-image: radial-gradient(circle, #818991, #90939e, #a19daa, #b3a6b3, #c6b0ba, #bea6ac, #b59c9f, #ac9392, #897472, #685653, #483936, #2b1f1c);
+    }
+</style>
+
+{% endblock %}
+
+{% block body %}
+    
+    <div class="prdouctimg">
+        <img class="final" src="{% static 'images/wtf.png' %}" alt="">
+    </div>
+    <center>
+        <div class="complete">
+            <div class="brandlogo">
+                <img class="final" src="{% static 'images/wtf.jpg' %}" alt="">
+            </div>
+
+            <div class="_all">
+                <div class="content">
+                    <h1>25% Student Discount</h1>
+                    <p>at WTF</p>
+                </div>
+                <div class="copy">
+                    <p>Copy code and enter on the<br>
+                        WholeTruthFood Website</p>
+                </div>
+                <div class="showcode" title="Copy Code" id="text" onclick="copyElementText(this.id)">STUDENT25<i class="fa fa-copy" onclick="copy()"></i></div>
+                <div class="button d-grid gap-2 col-6 mx-auto">
+                   <a href="https://cutt.ly/snkEp6j" target="_blank"><button class="btn btn-primary" type="button">Open Site & Use Code</button></a>
+                </div>
+                <hr>
+                <div class="contenttext">
+                    <h4>About this student discount</h4>
+                    <p> 1. It’s applicable sitewide on thewholetruthfoods.com, no Minimum Order Value.<br>
+                        2. Discount Amount: 25% off, valid 3 times per user.<br>
+                        3. Coupon Validity: 3 months.<br>
+                        4. It cannot be clubbed with any other coupon/voucher,<br>
+                        5. For coupon code issues, please reach out to orders@thewholetruthfoods.com.<br>
+                        6. Order will be delivered within 3-7 working days. Your order may face a slight delay, due to the restrictions in logistics in certain parts of the country.</p>
+                </div>
+            </div>
+        </div>
+    </center>
+
+{% endblock %}

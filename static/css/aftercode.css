@@ -1,0 +1,122 @@
+.prdouctimg {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    #2a0f46,
+    #4c3363,
+    #6e5982,
+    #9282a1,
+    #b7acc1,
+    #c3b5cf,
+    #cebfdd,
+    #dac8eb,
+    #ceb1e9,
+    #c19ae7,
+    #b383e4,
+    #a56be1
+  );
+}
+
+.brandlogo {
+  text-align: center;
+  margin-top: -5em;
+}
+
+.brandlogo img {
+  border: 2px solid black;
+  width: 10em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.523);
+}
+
+.content {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.content p {
+  text-decoration: underline;
+  color: #a56be1;
+}
+
+.complete {
+  width: 40em;
+  border: 0.1px solid rgb(199, 199, 199);
+  margin-bottom: 30px;
+}
+
+.button {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.contenttext {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.contenttext h4 {
+  font-weight: bold;
+}
+
+.showcode {
+  border: 3px dashed #ff2e2e !important;
+  width: 50% !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  padding: 16px 0px !important;
+  margin: 16px auto !important;
+  text-align: center !important;
+}
+
+.btn-primary {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  height: 46px;
+  line-height: 3rem;
+  padding: 0 3rem;
+  width: 100%;
+  border: 0;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(131deg, #bb91e4, #a672da, #ab81d5, #9245df);
+  background-size: 300% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em #a044fd;
+  background-size: 100% 100%;
+  transform: translateY(-0.15em);
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .complete {
+    width: 100%;
+  }
+  @media (max-width: 650px) {
+    .complete {
+      width: 100%;
+    }
+    img.final {
+      width: 100%;
+    }
+    .brandlogo {
+      text-align: center;
+      margin-top: -3em;
+      width: 36%;
+    }
+  }
+}
+
+i.fa.fa-copy {
+  margin-left: 10px;
+  cursor: pointer;
+  transform: scale(1.1);
+}

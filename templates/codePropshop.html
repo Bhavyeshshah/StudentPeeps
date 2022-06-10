@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}StudentPeeps >> Student Discount Propshop24{% endblock %}
+
+{% block linkshead %}
+
+<link rel="stylesheet" href="{% static 'css/aftercode.css' %}">
+<script src="{% static 'js/aftercode.js' %}"></script>
+
+{% endblock %}
+
+{% block body %}
+    
+    <div class="prdouctimg">
+        <img class="final" src="{% static 'images\propshop.png' %}" alt="">
+    </div>
+    <center>
+        <div class="complete">
+            <div class="brandlogo">
+                <img class="final" src="{% static 'images/prop.png' %}" alt="">
+            </div>
+
+            <div class="_all">
+                <div class="content">
+                    <h1>24% Student Discount</h1>
+                    <p>at Propshop24</p>
+                </div>
+                <div class="copy">
+                    <p>Copy code and enter on the<br>
+                        Propshop24 Website</p>
+                </div>
+                <div class="showcode" title="Copy Code" id="text" onclick="copyElementText(this.id)">STUDENTPEEPS10<i class="fa fa-copy" onclick="copy()"></i></div>
+
+                <div class="button d-grid gap-2 col-6 mx-auto">
+                    <a href="https://cutt.ly/6nkWE1H" target="_blank"><button class="btn btn-primary" type="button">Open Site & Use Code</button></a>
+                </div>
+                <hr>
+                <div class="contenttext">
+                    <h4>About this student discount</h4>
+                    <p>Use the code you received to get a flat 10% off on all products including gadgets, stationery, casuals, and home decor.<br>
+                    <br>
+                     • Visit us at- <a href="https://propshop24.com/">Propshop24.</a><br>
+                     • Select the products of your choice.<br>
+                     • Proceed to checkout and apply your coupon code in the ‘Discount Code’ field.<br>
+                     • That’s it! You get a flat 10% off on your awesome products.<br>
+                     • P.S. – The minimum order value has to be Rs. 1000</p>
+                </div>
+            </div>
+        </div>
+    </center>
+
+{% endblock %}

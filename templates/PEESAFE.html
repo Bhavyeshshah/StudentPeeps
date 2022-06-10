@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}StudentPeeps >> Pee Safe{% endblock %}
+
+{% block linkshead %}
+
+<link rel="stylesheet" href="{% static 'css/getcode.css' %}">
+
+{% endblock %}
+
+{% block body %}
+
+<div class="prdouctimg">
+    <img class="final" src="{% static 'images/peesafe.png' %}" alt="">
+</div>
+<center>
+    <div class="complete">
+        <div class="brandlogo">
+            <img class="final" src="{% static 'images/peesafe.jpg' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h1>15% Student Discount</h1>
+            <p>at PEE SAFE</p>
+        </div>
+        <div class="button d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary" href="/student-discount-pee-safe">Get Code</a>
+        </div>
+        <hr>
+        <div class="contenttext">
+            <h4>About this student discount</h4>
+            <p>• 15% off on billing of Rs. 499. <br>
+                • Log on to www.peesafe.com. <br>
+                • Add to cart the products of your choice. <br>
+                • Go to checkout and apply the code in the discount/gift card section to avail the offer.
+            </p>
+        </div>
+        <div class="contenttext">
+            <h4>Terms & Conditions</h4>
+            <p>• Offer valid till 30th June 2021. <br>
+                • Offer is valid only with the use of coupon codes. <br>
+                • Minimum order of Rs.499/- required to avail the offer. <br>
+                • No two offers can be clubbed together. <br>
+                • No exchange available. <br>
+                • Offer subject to availability of stocks. <br>
+                • It's an online offer only and not applicable on offline stores. <br>
+                • Orders placed using this coupon cannot be modified. <br>
+                • Participation in this offer is voluntary. <br>
+                • The code stands invalid during Pee Safe EOSS and blackout days. <br>
+                • Merchant reserves the right to withdraw/modify/cancel/change or temporarily discontinue the offer at
+                any point of time without prior notice at their sole discretion.
+            </p>
+        </div>
+    </div>
+</center>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}StudentPeeps >> Trib Fashion{% endblock %}
+
+{% block linkshead %}
+
+<link rel="stylesheet" href="{% static 'css/getcode.css' %}">
+
+{% endblock %}
+
+{% block body %}
+
+<div class="prdouctimg">
+    <img class="final" src="{% static 'images/5.png' %}" alt="">
+</div>
+<center>
+    <div class="complete">
+        <div class="brandlogo">
+            <img class="final" src="{% static 'images/trib.png' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h1>15% Student Discount</h1>
+            <p>at TRIB Fashion</p>
+        </div>
+        <div class="button d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary" href="/student-discount-trib">Get Code</a>
+        </div>
+        <hr>
+        <div class="contenttext">
+            <h4>About this student discount</h4>
+            <p> • It’s applicable sitewide on Tribfashion.com , no Minimum Order Value. <br>
+                • Discount Amount: 15% off. <br>
+                • Coupon Validity: 3 months. <br>
+                • It cannot be clubbed with any other coupon/voucher. <br>
+                • For coupon code issues, please reach out to <a href="mailto:contact@tribfashion.com">contact@tribfashion.com</a> <br>
+                • Order will be delivered within 3-7 working days. Your order may face a slight delay, due to the restrictions in logistics in certain parts of the country.</p>
+        </div>
+    </div>
+</center>
+
+
+{% endblock %}
+
+
+    

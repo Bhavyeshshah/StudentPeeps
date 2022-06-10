@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Unlu2 | StudentPeeps is a platform where you get exclusive student discounts on your favourite brands  {% endblock %}
+
+{% block linkshead %}
+
+<link rel="stylesheet" href="{% static 'css/getcode.css' %}">
+
+{% endblock %}
+
+{% block body %}
+
+<div class="prdouctimg">
+    <img class="final" src="{% static 'images/12.png' %}" alt="">
+</div>
+<center>
+    <div class="complete">
+        <div class="brandlogo">
+            <img class="final" src="{% static 'images/unluclass.png' %}" alt="">
+        </div>
+
+        <div class="content">
+            <h1>15% Student Discount</h1>
+            <p>at avni By GIVA</p>
+        </div>
+        <div class="button d-grid gap-2 col-6 mx-auto">
+            <a class="btn btn-primary" href="/codeunlu2">Get Code</a>
+        </div>
+        <hr>
+        <div class="contenttext">
+            <h4>About this student discount</h4>
+            <p>Unlock 20% student discount at Lovehoney with Student Beans.Use our Lovehoney student discount code
+                at the checkout to enjoy 20% off on your order.</p>
+        </div>
+    </div>
+</center>
+
+
+{% endblock %}
+
+
+    

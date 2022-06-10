@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<style>
+    body {
+        background-color: #eae7ed;
+        font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+    }
+
+    .container {
+        text-align: center;
+        background-color: white;
+        margin-top: 10px;
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        min-width: 320px;
+        margin: 10px auto;
+        padding: 2em 2em 1em;
+    }
+
+    .emaillogo img {
+        width: 40%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .content {
+        text-align: left;
+        margin-bottom: 7.5em;
+    }
+
+    .end {
+        text-align: center;
+        margin-top: 10px;
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        min-width: 320px;
+        margin: 10px auto;
+        padding: 2em 2em 1em;
+    }
+
+    .title h5 {
+        font-weight: 400;
+        font-size: 20px;
+
+    }
+
+    .btn-primary {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        height: 40px;
+        line-height: 2.5rem;
+        padding: 0 3rem;
+        width: 100%;
+        border: 0;
+        color: white;
+        border-radius: 0.5rem;
+        background-image: linear-gradient(131deg, #bb91e4, #a672da, #ab81d5, #9245df);
+        background-size: 300% 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .f_social_icon a {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        font-size: 14px;
+        line-height: 45px;
+        color: #858da8;
+        display: inline-block;
+        background: #ebeef5;
+        text-align: center;
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .ti-facebook:before {
+        content: "\e741";
+    }
+
+    .ti-twitter-alt:before {
+        content: "\e74b";
+    }
+
+    .ti-vimeo-alt:before {
+        content: "\e74a";
+    }
+
+    .ti-pinterest:before {
+        content: "\e731";
+    }
+
+    .thanks {
+        text-align: left;
+    }
+    .end p{
+        font-size: 9px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="emaillogo">
+            <img src="https://studentpeeps.club/wp-content/uploads/2021/06/STUDENTPEEPS-5-300x82.png" alt="">
+        </div>
+
+        <div class="content">
+            <p>Hello {{fname}}, <br>
+                <br>
+                Thanks for signing up to StudentPeeps.
+                <br>
+                <br>
+                You're just one step away from unlocking hundreds of discounts on your favourite brands. <br><br>
+                Please click the following link to activate your account. <br><br>
+                <a href="{{ activate_url }}" target="_blank"><button class="btn btn-primary mt-4">Activate your account
+                        now</button></a> <br>
+                <br>
+            <p>Link not working? Copy and paste the one below into your browser:</p>
+            <p>{{ activate_url }}</p>
+            </p>
+        </div>
+        <div class="thanks">
+            <p style="margin-bottom: 1.5em;">Best, <br>
+
+                The StudentPeeps Team</p>
+        </div>
+
+
+        <div class="social">
+            <h6>Follow our social media handles <br> For resources and hacks</h6>
+            <div class="f_social_icon">
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="end">
+        <p>Copyright © 2021 StudentPeeps All right reserved.
+            Enigmee Ventures <br>
+            Studentpeeps House <br>
+            17, Central Colony, VKIA
+            Jaipur-302013 <br>
+            Contact at hi@studentpeeps.club for any questions <br>
+            Copyright © 2021. All rights reserved.
+
+        </p>
+    </div>
+
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Confirmation</title>
+</head>
+<body>
+<h1>Hii {{fname}} {{lname}}, you are almost there.</h1><br>
+<h2>Please click <a href="{{ activate_url }}">here</a> to verify your account</h2>
+<p>{{ activate_url }}</p>
+<h2>The token expires on {{ expiry|time:"TIME_FORMAT" }}</h2>
+</body>
+</html> -->

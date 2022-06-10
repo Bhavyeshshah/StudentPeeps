@@ -1,0 +1,257 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="studentpeeps,student,peeps,offer,discounts,collegeid,differentbrands">
+    <meta name="author" content="Sidharth Verma | Harshit Singhal">
+    <meta name="publisher" content="StudentPeeps">
+    <meta name="copyright" content="StudentPeeps">
+    <meta name="description"
+        content="StudentPeeps is a platform where you get exclusive student discounts on your favourite brands">
+    <meta name="audience" content="Everyone">
+    <!-- meta tag for not zooming in Mobiles -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <title>{% block title %} {% endblock %}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <!------------ GOOGLE FONTS ------------>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Cabin|Lato|Fjalla+One|Montserrat|Roboto&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block linkshead %} {% endblock %}
+
+    <style>
+        nav {
+            border-bottom: 1px solid rgb(165, 165, 165);
+
+        }
+
+        .new_footer_area {
+            margin-top: 100px;
+            border-top: 1px solid rgb(165, 165, 165);
+        }
+
+        .logo img {
+            width: 7em;
+        }
+
+        nav ul {
+            background-color: #ffffff;
+            margin-bottom: 0rem;
+        }
+
+        @media (max-width:786px) {
+            nav ul {
+                position: absolute;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                text-align: center;
+                z-index: 99;
+                transition: 0.8s ease-in-out;
+            }
+
+            .logomob img {
+                width: 13em;
+                margin-left: 16px;
+            }
+        }
+
+        @media(max-width:350px) {
+            .logomob img {
+                width: 13em;
+                margin-left: 14px;
+            }
+        }
+
+        @media(min-width:390px) and (max-width:420px) {
+            .logomob img {
+                width: 13em;
+                margin-left: 44px;
+            }
+        }
+
+        @media(min-width:420px) and (max-width:580px) {
+            .logomob img {
+                width: 13em;
+                margin-left: 72px;
+            }
+        }
+
+        @media(min-width:580px) and (max-width:7850px) {
+            .logomob img {
+                width: 13em;
+                margin-left: 207px;
+            }
+        }
+
+        @media(min-width:786px) and (max-width:961px) {
+            .nav ul li {
+                font-size: 11px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav>
+        <!-- navbar Logo -->
+        <a href="#" class="logo"><img
+                src="/static\images\sp_logo.png" alt=""></a>
+
+        <!-- Navbar Toggler -->
+        <input type="checkbox" id="box-1">
+        <label id="tog" for="box-1">
+            <span><img src="https://img.icons8.com/material-rounded/48/000000/user-menu-male.png" /></span>
+        </label>
+        <a href="#" class="logomob"><img
+                src="/static\images\sp_logo.png" alt=""></a>
+
+        <!-- Navbar Items -->
+        <ul>
+            <li><a href="/">Home</a></li>
+            <!-- <li><a href="/about">About us</a></li> -->
+            <li><a href="https://studentpeeps.club/blog/">Blog</a></li>
+            <li><a href="/contactus">Contact us</a></li>
+
+            {% if user.is_authenticated %}
+
+            <li><i class="fa fa-sign-out"></i> <a href="/account/logout">Logout</a></li>
+            <li><i class="fa fa-user"><a href="/account/edit_profile"></i>Profile</a></li>
+            <li><i class="fa fa-user"></i> {{user.first_name}}</li>
+            {% else %}
+            <li><a href="/account/login">Login</a></li>
+            <li><a href="/account/register"><button type="button">Signup</button></a></li>
+
+            {% endif %}
+
+        </ul>
+
+        <!-- Navbar Search Form -->
+        <div id="navbar-form">
+            <input type="checkbox" id="box-2">
+            <form action="" method="POST" id="search-form">
+                {% csrf_token %}
+                <input type="search" placeholder="Search" name="search" id="search-bar">
+                <button id="search-btn" type="submit">
+                    <span><i class="fa fa-search"></i></span>
+                </button>
+            </form>
+
+            <label for="box-2" id="search-form-opener">
+                <span><i class="fa fa-search"></i></span>
+            </label>
+
+            <label for="box-2" id="search-form-closer">
+                <span><i class="fa fa-times"></i></span>
+            </label>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    {% block body %} {% endblock %}
+
+    <!-- Footer  Start-->
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Subscribe</h3>
+                            <p>Get free tools, hacks and resources to help you through your college life. 
+                                Subscribe to our weekly StudentLetter 
+                                Be one step ahead, always.</p>
+                            <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true"
+                                _lpchecked="1">
+                                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                <p class="mchimp-errmessage" style="display: none;"></p>
+                                <p class="mchimp-sucmessage" style="display: none;"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">About</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">AboutUs</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Signup</a></li>
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Term &amp; conditions</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+                            style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Follow us</h3>
+                            <div class="f_social_icon">
+                                <a href="https://www.instagram.com/studentpeeps/" class="fa fa-instagram" target="_blank"></a>
+                                <a href="https://www.facebook.com/studentpeeps/" class="fa fa-facebook" target="_blank"></a>
+                                <a href="https://www.twitter.com/studentpeeps/" class="fa fa-twitter" target="_blank"></a>
+                                <a href="https://www.linkedin.com/company/studentpeeps/" class="fa fa-linkedin" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class=" text-center">
+                        <hr>
+                        <p class="mb-0 f_400">Copyright © 2021 StudentPeeps | Enigmee Ventures. All right reserved. <br>
+                            Made with ❤️ in India 🇮🇳 StudentPeeps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+    {% block linksbody %} {% endblock %}
+
+
+</body>
+
+</html>
